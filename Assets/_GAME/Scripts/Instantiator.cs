@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Instantiator : MonoBehaviour
+[CreateAssetMenu]
+public class Instantiator : ScriptableObject
 {
     [SerializeField]
     private GameObject m_Prefab = null;
@@ -15,4 +16,15 @@ public class Instantiator : MonoBehaviour
     {
         Instantiate(m_Prefab, p_Infos.position, Quaternion.identity);
     }
+
+    public void InstantiatePrefab(HitInfos p_Infos)
+    {
+        Instantiate(m_Prefab, p_Infos.impact, Quaternion.identity);
+    }
+    public void InstantiatePrefab(ShootInfos p_Infos)
+    {
+        Instantiate(m_Prefab, p_Infos.origin, Quaternion.identity);
+    }
+
+
 }
