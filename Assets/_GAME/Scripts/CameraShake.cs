@@ -25,5 +25,13 @@ public class CameraShake : MonoBehaviour
 
         transform.localPosition = l_OriginalPos;
 
+   }
+
+    public void Shake()
+    {
+        StartCoroutine(Shake(0.1f, 0.1f));
     }
+
+
+
 }

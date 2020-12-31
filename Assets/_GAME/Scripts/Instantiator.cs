@@ -25,6 +25,7 @@ public class Instantiator : ScriptableObject
     {
         Instantiate(m_Prefab, p_Infos.origin, Quaternion.identity);
     }
+    
 
 
 }
