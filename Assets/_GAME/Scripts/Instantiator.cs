@@ -23,9 +23,10 @@ public class Instantiator : ScriptableObject
     }
     public void InstantiatePrefab(ShootInfos p_Infos)
     {
-        Instantiate(m_Prefab, p_Infos.origin, Quaternion.identity);
+        Instantiate(m_Prefab, p_Infos.origin, Quaternion.Euler(0,90,0));
     }
     
+
 
 
 }
